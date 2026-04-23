@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KyodaN SkinS | CS2 Custom Skins</title>
+    <meta name="description" content="Заказать кастомизированный скин для CS2 специально для вас. Договорная цена, премиум качество.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="logo">KyodaN <span>SkinS</span></div>
+        <ul class="nav-links">
+            <li><a href="#skins" data-i18n="navSkins">Скины</a></li>
+            <li><a href="#home" data-i18n="navHome">Главная</a></li>
+            <li><a href="#tools" data-i18n="navTools">С чем работаю</a></li>
+            <li><a href="#contact" data-i18n="navContact">Связь</a></li>
+        </ul>
+        <div class="lang-switch">
+            <button onclick="setLang('ru')" id="btn-ru" class="active">RU</button>
+            <button onclick="setLang('en')" id="btn-en">EN</button>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Раздел Скины (Теперь первый) -->
+    <section id="skins" class="skins-section" style="padding-top: 150px;">
+        <div class="container">
+            <h2 class="section-title" data-i18n="skinsTitle">Мои <span>Работы</span></h2>
+            <p class="section-subtitle" data-i18n="skinsSubtitle">Средняя цена за скин — 20 евро</p>
+            <div class="skins-grid" id="skins-container">
+                <!-- Сюда будут динамически добавляться скины из config.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Главный экран -->
+    <section id="home" class="hero" style="height: auto; padding: 100px 20px;">
+        <div class="hero-content">
+            <h1 data-i18n="heroTitle">Эксклюзивные кастомные скины для <span>CS2</span></h1>
+            <p data-i18n="heroSubtitle">Рисую уникальные скины для CS2. Премиум качество, внимание к деталям.</p>
+            <a href="#contact" class="btn btn-primary" data-i18n="heroBtn">Заказать скин</a>
+        </div>
+        <div class="hero-bg-glow"></div>
+    </section>
+
+    <!-- Раздел С чем работаю -->
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="toolsTitle">С чем <span>работаю</span></h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <img src="https://cdn.simpleicons.org/krita/00f0ff" alt="Krita" class="tool-svg">
+                    <h3>Krita</h3>
+                    <p data-i18n="toolsKritaDesc">Использую для детальной отрисовки текстур, создания паттернов и уникальных артов для скина.</p>
+                </div>
+                <div class="tool-card">
+                    <img src="https://cdn.simpleicons.org/blender/00f0ff" alt="Blender" class="tool-svg">
+                    <h3>Blender 3D</h3>
+                    <p data-i18n="toolsBlenderDesc">Применяю для наложения текстур на 3D модель оружия и настройки материалов (PBR).</p>
+                </div>
+                <div class="tool-card">
+                    <img src="https://cdn.simpleicons.org/counterstrike/00f0ff" alt="CS2" class="tool-svg">
+                    <h3>CS2 Workshop</h3>
+                    <p data-i18n="toolsCS2Desc">Импорт готового скина в игру, настройка износа (Wear) и экспорт в финальном формате.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел Связь -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-box">
+                <h2 class="section-title" data-i18n="contactTitle">Свяжитесь со <span>мной</span></h2>
+                <p class="contact-desc" data-i18n="contactDesc">Заказать кастомизированный скин специально для вас - договорная цена!</p>
+                
+                <div class="payment-info" data-i18n="paymentInfo">
+                    💎 Оплату принимаю в TON или USDT 💎
+                </div>
+                
+                <div class="contact-methods">
+                    <div class="contact-card telegram-card">
+                        <img src="https://cdn.simpleicons.org/telegram/00f0ff" alt="Telegram" class="tool-svg contact-svg">
+                        <h3>Telegram</h3>
+                        <p>@kyodan2k</p>
+                        <a href="https://t.me/kyodan2k" target="_blank" class="btn btn-tg" data-i18n="tgBtn">Написать в TG</a>
+                    </div>
+                    
+                    <div class="contact-card email-card">
+                        <img src="https://cdn.simpleicons.org/gmail/00f0ff" alt="Email" class="tool-svg contact-svg">
+                        <h3>Email</h3>
+                        <p>jbille449@gmail.com</p>
+                        <a href="mailto:jbille449@gmail.com" class="btn btn-email" data-i18n="emailBtn">Написать на Почту</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p data-i18n="footer">&copy; 2026 KyodaN SkinS. Все права защищены.</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <button class="lightbox-btn prev" onclick="changeLightboxImage(-1)">&#10094;</button>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Enlarged Skin">
+        <button class="lightbox-btn next" onclick="changeLightboxImage(1)">&#10095;</button>
+        <div class="lightbox-zoom-hint" data-i18n="zoomHint">Кликните для увеличения</div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="config.js"></script>
+    <script src="i18n.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
